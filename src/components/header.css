@@ -1,0 +1,18 @@
+header {
+  height: 5vh;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+}
+
+.active {
+  text-decoration: underline;
+}

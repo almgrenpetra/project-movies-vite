@@ -1,0 +1,58 @@
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.movie-card {
+  position: relative;
+  width: 100%;
+}
+
+.poster-image {
+  width: 100%;
+}
+
+.movie-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  display: none;
+}
+
+.movie-card:hover .movie-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.release-date {
+  padding: 16px 0;
+}
+
+@media (min-width: 370px) {
+  .movie-card {
+    width: 50%;
+  }
+}
+
+@media (min-width: 570px) {
+  .movie-card {
+    width: 33%;
+  }
+}
+
+@media (min-width: 820px) {
+  .movie-card {
+    width: 25%;
+  }
+}

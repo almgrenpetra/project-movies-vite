@@ -23,3 +23,5 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+
+"./api_key.js"

@@ -1,0 +1,107 @@
+.movie-details-page {
+  min-height: 90vh;
+  background-size: cover;
+  position: relative;
+}
+
+.back-link {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  filter: drop-shadow(2px 3px 4px rgb(0 0 0/0.5));
+}
+
+.back-icon {
+  width: 30px;
+  margin-right: 5px;
+  transition: margin-right 0.3s ease;
+}
+
+.back-link:hover .back-icon {
+  margin-right: 12px;
+}
+
+.movie-details-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+.movie-details-image {
+  border: 5px solid #fff;
+  width: 200px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.title-rating-container {
+  margin: 20px 0;
+}
+
+.title {
+  display: inline;
+  font-size: 24px;
+  text-shadow: 1px 1px #4d4d4d;
+}
+
+.rating {
+  display: inline;
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 500;
+  background: #fff;
+  color: #000;
+  padding: 0 5px;
+}
+
+.rating:before {
+  content: url(./star.svg);
+  padding-right: 5px;
+}
+
+.original-title {
+  margin-top: 10px;
+}
+
+.overview {
+  max-width: 400px;
+  line-height: 1.25;
+}
+
+@media (min-width: 577px) {
+  .movie-details-container {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .movie-details-image {
+    width: 240px;
+  }
+
+  .details {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 770px) {
+  .movie-card {
+    width: 33%;
+  }
+
+  .movie-details-image {
+    width: auto;
+  }
+}
