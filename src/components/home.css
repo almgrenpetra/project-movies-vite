@@ -30,7 +30,7 @@
   justify-content: flex-end;
 }
 
-h2 {
+.movie-title {
   font-size: 32px;
   font-weight: bold;
 }

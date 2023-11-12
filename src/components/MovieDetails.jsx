@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { API_KEY } from "../../api_key.js";
 import "./movieDetails.css";
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
-  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`;
-
   const [movie, setMovie] = useState([]);
   const navigate = useNavigate();
 
@@ -15,6 +12,9 @@ export const MovieDetails = () => {
   }, []);
 
   const fetchMovieDetails = () => {
+    const API_KEY = import.meta.env.VITE_OPENDB_KEY;
+    const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`;
+
     fetch(url)
       .then((response) => response.json())
       .then((json) => {

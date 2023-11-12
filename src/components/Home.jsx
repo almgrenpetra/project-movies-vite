@@ -1,14 +1,13 @@
-// Get API_KEY from separate file
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { API_KEY } from "../../api_key.js";
 import "./home.css";
 
 export const Home = () => {
   const [movies, setMovies] = useState([]);
-  const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
   const fetchMovies = () => {
+    const API_KEY = import.meta.env.VITE_OPENDB_KEY;
+    const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     fetch(url)
       .then((response) => response.json())
       .then((json) => setMovies(json.results))
@@ -37,7 +36,7 @@ export const Home = () => {
               className="poster-image"
             />
             <div className="movie-details">
-              <h2>{movie.title}</h2>
+              <h2 className="movie-title">{movie.title}</h2>
               <p className="release-date">Relased {movie.release_date}</p>
             </div>
           </Link>
